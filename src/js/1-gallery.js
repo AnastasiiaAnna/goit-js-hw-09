@@ -1,6 +1,4 @@
-  // Описаний в документації
-  import SimpleLightbox from 'simplelightbox';
-  // Додатковий імпорт стилів
+   import SimpleLightbox from 'simplelightbox';
   import 'simplelightbox/dist/simple-lightbox.min.css';
 const galleryItems = [
     {
@@ -69,7 +67,7 @@ const galleryItems = [
   ];
   const galleryContainerEl = document.querySelector('.gallery');
   const imagesMarkup = createGalleryMarkup(galleryItems);
-  galleryContainerEl.innerHTML = imagesMarkup; // Використання змінної imagesMarkup тут
+  galleryContainerEl.innerHTML = imagesMarkup; 
   
   function createGalleryMarkup(items) {
     return items

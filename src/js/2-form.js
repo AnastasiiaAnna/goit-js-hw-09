@@ -1,6 +1,5 @@
 const feedbackForm = document.querySelector('.feedback-form');
 
-// Завантаження даних з локального сховища при завантаженні сторінки
 document.addEventListener('DOMContentLoaded', () => {
     const savedData = localStorage.getItem('feedback-form-state');
     if (savedData) {
@@ -24,7 +23,6 @@ feedbackForm.addEventListener('submit', e => {
     const email = feedbackForm.elements.email.value.trim();
     const message = feedbackForm.elements.message.value.trim();
 
-    // Перевірка заповненості полів
     if (!email || !message) {
         alert('Будь ласка, заповніть усі поля!');
         return;
@@ -32,7 +30,6 @@ feedbackForm.addEventListener('submit', e => {
 
     console.log({ email, message });
 
-    // Очищення форми та сховища
     feedbackForm.reset();
     localStorage.removeItem('feedback-form-state');
 });
